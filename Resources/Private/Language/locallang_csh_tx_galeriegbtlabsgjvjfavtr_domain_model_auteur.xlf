@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-05-20T18:05:35Z" product-name="galerie_gbtlabsgjvjfavtr">
+		<header/>
+		<body>
+			<trans-unit id="lastname.description">
+				<source>Nom de famille</source>
+			</trans-unit>
+			<trans-unit id="firstname.description">
+				<source>Prénom</source>
+			</trans-unit>
+			<trans-unit id="job.description">
+				<source>Profession</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>Adresse email</source>
+			</trans-unit>
+			<trans-unit id="phone_number.description">
+				<source>Numéro de téléphone</source>
+			</trans-unit>
+			<trans-unit id="website.description">
+				<source>Site internet</source>
+			</trans-unit>
+			<trans-unit id="biography.description">
+				<source>Biographie</source>
+			</trans-unit>
+			<trans-unit id="albums.description">
+				<source>Albums</source>
+			</trans-unit>
+			<trans-unit id="social_networks.description">
+				<source>Social Networks</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
