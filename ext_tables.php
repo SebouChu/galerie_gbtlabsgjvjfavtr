@@ -5,6 +5,16 @@ call_user_func(
     function()
     {
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Gtasjjat.GalerieGbtlabsgjvjfavtr',
+            'Plugin',
+            'galerie_photo'
+        );
+
+        $pluginSignature = str_replace('_', '', 'galerie_gbtlabsgjvjfavtr') . '_plugin';
+        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:galerie_gbtlabsgjvjfavtr/Configuration/FlexForms/flexform_plugin.xml');
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('galerie_gbtlabsgjvjfavtr', 'Configuration/TypoScript', 'galerie_cantonnais');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_galeriegbtlabsgjvjfavtr_domain_model_image', 'EXT:galerie_gbtlabsgjvjfavtr/Resources/Private/Language/locallang_csh_tx_galeriegbtlabsgjvjfavtr_domain_model_image.xlf');
