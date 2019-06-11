@@ -1,28 +1,20 @@
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-galerie-gbtlabsgjvjfavtr" >
-	<tr>
-		<td>
-			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.name" />
-		</td>
-		<td>
-		{album.name}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.description" />
-		</td>
-		<td>
-		{album.description}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.publication_date" />
-		</td>
-		<td>
-		{album.publicationDate -> f:format.date()}
-		</td>
-	</tr>
-</table>
+<p>Publié le {album.publicationDate -> f:format.date()}</p>
+<div>
+	{album.description -> f:format.htmlentitiesDecode(encoding: 'UTF-8')}
+</div>
+<div style="display: grid; grid-template-columns:repeat(1fr)">
+	<f:widget.paginate objects="{album.images}" as="paginatedImages">
+		<f:for each="{album.images}" as="image" iteration="it">
+			<f:image image="{image.file}" class="img-thumbnail"
+				style="margin: 2rem; object-fit: cover; max-width: 25rem; max-height: 15rem;" />
+		</f:for>
+	</f:widget.paginate>
+</div>
+<div>
+	<f:for each="{album.tags}" as="tag" iteration="it">
+		{tag.name}
+	</f:for>
+</div>
+
 </html>
