@@ -3,7 +3,7 @@
 <div>
 	{album.description -> f:format.htmlentitiesDecode(encoding: 'UTF-8')}
 </div>
-<div style="display: grid; grid-template-columns:repeat(1fr)">
+<div>
 	<f:widget.paginate objects="{album.images}" as="paginatedImages">
 		<f:for each="{album.images}" as="image" iteration="it">
 			<f:image image="{image.file}" class="img-thumbnail"
