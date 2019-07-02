@@ -66,7 +66,7 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         } else {
             $keyword = '';
         }
-        $albums = $this->albumRepository->search($keyword);
-        $this->view->assign('albums', $albums)->assign('keyword', $keyword);
+        $categories = $this->categoryRepository->search($keyword);
+        $this->view->assign('categories', $categories)->assign('keyword', $keyword);
     }
 }
