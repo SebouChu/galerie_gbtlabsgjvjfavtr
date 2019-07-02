@@ -29,6 +29,10 @@
 										<numIndex index="0">Liste auteurs</numIndex>
 										<numIndex index="1">Auteur-&gt;list</numIndex>
 									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">Liste categories</numIndex>
+										<numIndex index="1">Category-&gt;list</numIndex>
+									</numIndex>
 								</items>
 							</config>
 						</TCEforms>

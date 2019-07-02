@@ -25,6 +25,14 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Controller;
 class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
+     * categoryRepository
+     *
+     * @var \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository\CategoryRepository
+     * @inject
+     */
+    protected $categoryRepository = null;
+
+    /**
      * action list
      *
      * @return void

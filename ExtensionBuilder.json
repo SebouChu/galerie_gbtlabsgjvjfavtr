@@ -246,8 +246,8 @@
         {
             "config": {
                 "position": [
-                    322,
-                    408
+                    341,
+                    430
                 ]
             },
             "name": "New Model Object",
@@ -648,7 +648,7 @@
                 "actions": {
                     "controllerActionCombinations": "Image => latest\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest",
                     "noncacheableActions": "Album => search",
-                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search;\nListe auteurs\nAuteur->list"
+                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search;\nListe auteurs\nAuteur->list;\nListe categories\nCategory->list"
                 },
                 "description": "Galerie photo de qualit\u00e9",
                 "key": "plugin",
@@ -732,7 +732,7 @@
         }
     ],
     "log": {
-        "last_modified": "2019-06-11 02:57",
+        "last_modified": "2019-07-02 09:51",
         "extension_builder_version": "8.10.3",
         "be_user": " (1)"
     }
