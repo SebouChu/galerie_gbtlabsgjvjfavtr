@@ -71,6 +71,7 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function latestAction()
     {
-
+      $albums = $this->albumRepository->findLatest();
+      $this->view->assign('albums', $albums);
     }
 }
