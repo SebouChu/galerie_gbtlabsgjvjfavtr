@@ -149,7 +149,8 @@
                     "_default4_delete": false,
                     "customActions": [
                         "search",
-                        "latest"
+                        "latest",
+                        "addTag"
                     ]
                 },
                 "name": "Album",
@@ -646,9 +647,9 @@
         "plugins": [
             {
                 "actions": {
-                    "controllerActionCombinations": "Image => latest\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest\nTag => list,new,create,delete",
+                    "controllerActionCombinations": "Image => latest\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest,addTag\nTag => list,new,create,delete",
                     "noncacheableActions": "Album => search",
-                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search;\nListe auteurs\nAuteur->list;\nListe categories\nCategory->list;\nListe tags\nTag->list"
+                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search; Album->addTag;\nListe auteurs\nAuteur->list;\nListe categories\nCategory->list;\nListe tags\nTag->list"
                 },
                 "description": "Galerie photo de qualit\u00e9",
                 "key": "plugin",
@@ -732,7 +733,7 @@
         }
     ],
     "log": {
-        "last_modified": "2019-07-02 09:51",
+        "last_modified": "2019-07-02 02:47",
         "extension_builder_version": "8.10.3",
         "be_user": " (1)"
     }

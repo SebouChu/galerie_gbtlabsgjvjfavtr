@@ -1,4 +1,5 @@
 <?php
+
 namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
 
 /***
@@ -24,4 +25,4 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
  */
 class TagRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    }
+}

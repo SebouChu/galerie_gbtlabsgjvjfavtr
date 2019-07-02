@@ -1,5 +1,8 @@
 <?php
+
 namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Controller;
+
+use Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository\TagRepository;
 
 /***
  *
@@ -33,6 +36,19 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $albumRepository = null;
 
     /**
+     * tagRepository
+     *
+     * @var \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository\TagRepository
+     * @inject
+     */
+    protected $tagRepository = null;
+
+    public function __construct(TagRepository $tagRepository)
+    {
+        $this->tagRepository = $tagRepository;
+    }
+
+    /**
      * action list
      *
      * @return void
@@ -40,7 +56,8 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function listAction()
     {
         $albums = $this->albumRepository->findAll();
-        $this->view->assign('albums', $albums);
+        $tags = $this->tagRepository->findAll();
+        $this->view->assign('albums', $albums)->assign('tags', $tags);
     }
 
     /**
@@ -57,16 +74,18 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * action search
      *
+     * @param $keyword
      * @return void
      */
     public function searchAction($keyword = '')
     {
-      if ($this->request->hasArgument('keyword')) {
-        $keyword = $this->request->getArgument('keyword');
-      }
+        if ($this->request->hasArgument('keyword')) {
+            $keyword = $this->request->getArgument('keyword');
+        }
+        $albums = $this->albumRepository->search($keyword);
 
-      $albums = $this->albumRepository->search($keyword);
-      $this->view->assign('albums', $albums)->assign('keyword', $keyword);
+        $tags = $this->tagRepository->findAll();
+        $this->view->assign('albums', $albums)->assign('tags', $tags)->assign('keyword', $keyword);
     }
 
     /**
@@ -78,5 +97,15 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $albums = $this->albumRepository->findLatest();
         $this->view->assign('albums', $albums);
+    }
+
+    /**
+     * action addTag
+     *
+     * @return void
+     */
+    public function addTagAction()
+    {
+
     }
 }

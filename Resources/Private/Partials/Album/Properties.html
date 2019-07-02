@@ -1,28 +1,25 @@
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<br>
-<h3><b>Details album</b></h3>
-<br>
-<div><p><h4><b>Description : </b>{album.description -> f:format.htmlentitiesDecode(encoding: 'UTF-8')}</h4></div>
-</p></div>
-<div>
-    <h4><p><b>Date de création : </b>{album.publicationDate -> f:format.date()}</p></h4>
-</div>
-<br>
-<br>
-<table class="tx_galeriegbtlabsgjvjfavtr table table-striped table-hover">
-    <tr>
-        <th>Name</th>
-        <th>Date publication</th>
-        <th>Image</th>
-    </tr>
-    <f:for each="{album.images}" as="image" iteration="it">
-        <tr>
-            <td>{image.name}</td>
-            <td>{image.publicationDate -> f:format.date()}</td>
-            <td>
-                <f:image image="{image.file}" class="img-thumbnail"
-                         style="margin: 2rem; object-fit: cover; max-width: 25rem; max-height: 15rem;"/>
-            </td>
-        </tr>
-    </f:for>
+<table class="tx-galerie-gbtlabsgjvjfavtr" >
+	<tr>
+		<td>
+			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.name" />
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.description" />
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.publication_date" />
+		</td>
+		<td>
+		</td>
+	</tr>
 </table>
+</html>

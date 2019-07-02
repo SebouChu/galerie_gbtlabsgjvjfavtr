@@ -12,7 +12,7 @@ call_user_func(
                 'Image' => 'latest',
                 'Category' => 'list, show',
                 'Auteur' => 'list, show',
-                'Album' => 'list, show, latest',
+                'Album' => 'list, show, latest, addTag',
                 'Tag' => 'list, new, create, delete'
             ],
             // non-cacheable actions
