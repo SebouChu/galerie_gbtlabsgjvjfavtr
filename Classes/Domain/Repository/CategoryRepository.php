@@ -24,4 +24,10 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
  */
 class CategoryRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+    public function search(string $keyword)
+    {
+        $query = $this->createQuery();
+        return $query->matching($query->like('name', '%'.$keyword.'%'))
+                      ->execute();
+    }
 }

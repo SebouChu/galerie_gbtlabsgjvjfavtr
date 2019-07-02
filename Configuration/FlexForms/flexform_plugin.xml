@@ -27,11 +27,11 @@
 									</numIndex>
 									<numIndex index="3">
 										<numIndex index="0">Liste auteurs</numIndex>
-										<numIndex index="1">Auteur-&gt;list</numIndex>
+										<numIndex index="1">Auteur-&gt;list;Auteur->show</numIndex>
 									</numIndex>
 									<numIndex index="4">
 										<numIndex index="0">Liste categories</numIndex>
-										<numIndex index="1">Category-&gt;list</numIndex>
+										<numIndex index="1">Category-&gt;list;Category-&gt;search;Category->show</numIndex>
 									</numIndex>
 									<numIndex index="5">
 										<numIndex index="0">Liste tags</numIndex>

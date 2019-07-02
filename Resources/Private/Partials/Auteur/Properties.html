@@ -5,6 +5,7 @@
 			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.lastname" />
 		</td>
 		<td>
+			{auteur.lastname}
 		</td>
 	</tr>
 	<tr>
@@ -12,6 +13,7 @@
 			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.firstname" />
 		</td>
 		<td>
+			{auteur.firstname}
 		</td>
 	</tr>
 	<tr>
@@ -19,6 +21,7 @@
 			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.job" />
 		</td>
 		<td>
+			{auteur.job}
 		</td>
 	</tr>
 	<tr>
@@ -26,6 +29,7 @@
 			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.address" />
 		</td>
 		<td>
+			{auteur.address}
 		</td>
 	</tr>
 	<tr>
@@ -33,6 +37,7 @@
 			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.email" />
 		</td>
 		<td>
+			<a href="mailto:{auteur.email}">{auteur.email}</a>
 		</td>
 	</tr>
 	<tr>
@@ -40,6 +45,7 @@
 			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.phone_number" />
 		</td>
 		<td>
+			<a href="tel:{auteur.phoneNumber}">{auteur.phoneNumber}</a>
 		</td>
 	</tr>
 	<tr>
@@ -47,6 +53,7 @@
 			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.website" />
 		</td>
 		<td>
+			<a href="{auteur.website}">{auteur.website}</a>
 		</td>
 	</tr>
 	<tr>
@@ -54,6 +61,7 @@
 			<f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.biography" />
 		</td>
 		<td>
+			<f:format.stripTags>{auteur.biography}</f:format.stripTags>
 		</td>
 	</tr>
 </table>

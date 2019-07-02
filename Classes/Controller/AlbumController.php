@@ -77,15 +77,16 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @param $keyword
      * @return void
      */
-    public function searchAction($keyword = '')
+    public function searchAction()
     {
-        if ($this->request->hasArgument('keyword')) {
-            $keyword = $this->request->getArgument('keyword');
-        }
-        $albums = $this->albumRepository->search($keyword);
+      if ($this->request->hasArgument('keyword')) {
+        $keyword = $this->request->getArgument('keyword');
+      } else {
+        $keyword = '';
+      }
 
-        $tags = $this->tagRepository->findAll();
-        $this->view->assign('albums', $albums)->assign('tags', $tags)->assign('keyword', $keyword);
+      $albums = $this->albumRepository->search($keyword);
+      $this->view->assign('albums', $albums)->assign('keyword', $keyword);
     }
 
     /**

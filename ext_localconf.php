@@ -9,7 +9,7 @@ call_user_func(
             'Gtasjjat.GalerieGbtlabsgjvjfavtr',
             'Plugin',
             [
-                'Image' => 'latest',
+                'Image' => 'latest, new, create',
                 'Category' => 'list, show',
                 'Auteur' => 'list, show',
                 'Album' => 'list, show, latest, addTag',
@@ -17,7 +17,8 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Album' => 'search'
+                'Album' => 'search',
+                'Category' => 'search'
             ]
         );
 
