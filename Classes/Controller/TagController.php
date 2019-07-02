@@ -31,9 +31,10 @@ class TagController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @inject
      */
     protected $tagRepository = null;
+
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
@@ -44,7 +45,7 @@ class TagController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action new
-     * 
+     *
      * @return void
      */
     public function newAction()
@@ -54,7 +55,7 @@ class TagController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action create
-     * 
+     *
      * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $newTag
      * @return void
      */
@@ -67,7 +68,7 @@ class TagController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action delete
-     * 
+     *
      * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $tag
      * @return void
      */

@@ -27,14 +27,14 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
      * imageRepository
-     * 
+     *
      * @var \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository\ImageRepository
      */
     protected $imageRepository = null;
 
     /**
      * Constructor initialising injected dependencies
-     * 
+     *
      * @param ImageRepository $imageRepository
      */
     public function __construct(ImageRepository $imageRepository)
@@ -44,7 +44,7 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action latest
-     * 
+     *
      * @return void
      */
     public function latestAction()
@@ -55,7 +55,7 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action new
-     * 
+     *
      * @return void
      */
     public function newAction()
@@ -65,7 +65,7 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action create
-     * 
+     *
      * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image $newImage
      * @return void
      */

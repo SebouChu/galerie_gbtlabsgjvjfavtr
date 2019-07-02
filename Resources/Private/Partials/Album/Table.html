@@ -14,6 +14,15 @@
         <td>
           <f:link.action action="edit" arguments="{album : album}" class="btn btn-primary btn-sm" style="margin: 0 0.5rem;">Edit</f:link.action>
           <f:link.action action="delete" arguments="{album : album}" class="btn btn-danger btn-sm" style="margin: 0 0.5rem;">Delete</f:link.action>
+          <select>
+            <option value="--">Add tag</option>
+
+            <f:for each="{tags}" as="tag">
+              <option value="{tag.name}">
+                <f:link.action action="addTag" arguments="{album : album, tag : tag}" style="margin: 0 0.5rem;">{tag.name}</f:link.action>
+              </option>
+            </f:for>
+          </select>
         </td>
       </tr>
     </f:for>

@@ -25,4 +25,16 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
  */
 class AuteurRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+    public function search(string $keyword)
+    {
+        $query = $this->createQuery();
+
+        return $query->matching(
+            $query->logicalOr([
+                $query->like('firstname', '%' . $keyword . '%'),
+                $query->like('lastname', '%' . $keyword . '%'),
+                $query->like('email', '%' . $keyword . '%'),
+            ])
+        )->execute();
+    }
 }
