@@ -27,7 +27,7 @@
 									</numIndex>
 									<numIndex index="3">
 										<numIndex index="0">Liste auteurs</numIndex>
-										<numIndex index="1">Auteur-&gt;list;Auteur->show</numIndex>
+										<numIndex index="1">Auteur-&gt;list;Auteur->show;Auteur->search</numIndex>
 									</numIndex>
 									<numIndex index="4">
 										<numIndex index="0">Liste categories</numIndex>
