@@ -14,6 +14,14 @@
 
 	<f:section name="content">
 		<h1>Album "{album.name}"</h1>
+		<br>
+		<h3><b>Details :</b></h3>
+		<div><h4><b>Name : </b>{album.name}</h4></div>
+		<div><p><h4><b>Description : </b>{album.description -> f:format.htmlentitiesDecode(encoding: 'UTF-8')}</h4></div></p></div>
+		<div><h4><p><b>Date de création : </b>{album.publicationDate -> f:format.date()}</p></h4></div>
+		<div>
+			{album.description -> f:format.htmlentitiesDecode(encoding: 'UTF-8')}
+		</div>
 
 		<f:flashMessages />
 		<f:render partial="Album/Properties" arguments="{album:album}" />
