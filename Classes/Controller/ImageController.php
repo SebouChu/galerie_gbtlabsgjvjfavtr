@@ -1,4 +1,5 @@
 <?php
+
 namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Controller;
 
 /***
@@ -31,6 +32,12 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function latestAction()
     {
-
+        $images = $this->createQuery()
+            ->setOrderings([
+                'publicationDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+            ])
+            ->setLimit(5)
+            ->execute();
+        $this->view->assign('images', $images);
     }
 }

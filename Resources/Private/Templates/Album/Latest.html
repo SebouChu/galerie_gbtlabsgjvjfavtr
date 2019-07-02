@@ -13,12 +13,10 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Listing for Category</h1>
+		<h1>5 Latest Albums</h1>
 
 		<f:flashMessages />
 
-		<f:render partial="Category/Table" arguments="{categories:categories}" />
-		
-		<f:link.action action="new">New Category</f:link.action>
+		<f:render partial="Album/Table" arguments="{albums:albums}" />
 	</f:section>
 </html>

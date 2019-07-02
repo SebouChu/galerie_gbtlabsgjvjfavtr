@@ -25,6 +25,14 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Controller;
 class AuteurController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
+     * auteurRepository
+     *
+     * @var \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository\AuteurRepository
+     * @inject
+     */
+    protected $auteurRepository = null;
+
+    /**
      * action list
      *
      * @return void

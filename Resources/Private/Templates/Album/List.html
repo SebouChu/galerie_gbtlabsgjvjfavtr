@@ -17,24 +17,11 @@
 
 		<f:flashMessages />
 
-		<table  class="tx_galeriegbtlabsgjvjfavtr" >
-			<tr>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.name" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.description" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.publication_date" /></th>
-				<th> </th>
-				<th> </th>
-			</tr>
+		<f:form action="search" arguments="{keyword}" class="form-inline" style="margin-bottom: 2rem;">
+		  <f:form.textfield class="form-control" property="keyword" placeholder="Type here..." style="margin-right: 0.5rem;" />
+		  <f:form.submit value="Search" class="btn btn-success" />
+		</f:form>
 
-			<f:for each="{albums}" as="album">
-				<tr>
-					<td><f:link.action action="show" arguments="{album : album}"> {album.name}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{album : album}"> {album.description}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{album : album}"> {album.publicationDate -> f:format.date()}</f:link.action></td>
-					<td><f:link.action action="edit" arguments="{album : album}">Edit</f:link.action></td>
-					<td><f:link.action action="delete" arguments="{album : album}">Delete</f:link.action></td>
-				</tr>
-			</f:for>
-		</table>
+		<f:render partial="Album/Table" arguments="{albums:albums}" />
 	</f:section>
 </html>

@@ -33,6 +33,10 @@
 										<numIndex index="0">Liste tags</numIndex>
 										<numIndex index="1">Tag-&gt;list</numIndex>
 									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">Liste categories</numIndex>
+										<numIndex index="1">Category-&gt;list</numIndex>
+									</numIndex>
 								</items>
 							</config>
 						</TCEforms>

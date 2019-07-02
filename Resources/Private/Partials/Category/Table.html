@@ -1,0 +1,23 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+  <table class="tx_galeriegbtlabsgjvjfavtr table table-striped table-hover" >
+    <tr>
+      <th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_category.name" /></th>
+      <th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_category.description" /></th>
+      <th> </th>
+      <th> </th>
+    </tr>
+
+    <f:for each="{categories}" as="category">
+      <tr>
+        <td><f:link.action action="show" arguments="{category : category}"> {category.name}</f:link.action></td>
+        <td><f:format.stripTags>{category.description}</f:format.stripTags></td>
+        <td>
+          <f:link.action action="edit" arguments="{category : category}" class="btn btn-primary btn-sm" style="margin: 0 0.5rem;">Edit</f:link.action>
+          <f:link.action action="delete" arguments="{category : category}" class="btn btn-danger btn-sm" style="margin: 0 0.5rem;">Delete</f:link.action>
+        </td>
+      </tr>
+    </f:for>
+  </table>
+
+</html>
