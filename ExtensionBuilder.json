@@ -246,8 +246,8 @@
         {
             "config": {
                 "position": [
-                    322,
-                    408
+                    341,
+                    430
                 ]
             },
             "name": "New Model Object",
@@ -316,11 +316,11 @@
             "name": "New Model Object",
             "value": {
                 "actionGroup": {
-                    "_default0_list": false,
+                    "_default0_list": true,
                     "_default1_show": false,
-                    "_default2_new_create": false,
+                    "_default2_new_create": true,
                     "_default3_edit_update": false,
-                    "_default4_delete": false,
+                    "_default4_delete": true,
                     "customActions": []
                 },
                 "name": "Tag",
@@ -646,9 +646,9 @@
         "plugins": [
             {
                 "actions": {
-                    "controllerActionCombinations": "Image => latest\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest",
+                    "controllerActionCombinations": "Image => latest\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest\nTag => list,new,create,delete",
                     "noncacheableActions": "Album => search",
-                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search;\nListe auteurs\nAuteur->list"
+                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search;\nListe auteurs\nAuteur->list;\nListe categories\nCategory->list;\nListe tags\nTag->list"
                 },
                 "description": "Galerie photo de qualit\u00e9",
                 "key": "plugin",
@@ -732,7 +732,7 @@
         }
     ],
     "log": {
-        "last_modified": "2019-06-11 02:57",
+        "last_modified": "2019-07-02 09:51",
         "extension_builder_version": "8.10.3",
         "be_user": " (1)"
     }

@@ -59,9 +59,14 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      *
      * @return void
      */
-    public function searchAction()
+    public function searchAction($keyword = '')
     {
+      if ($this->request->hasArgument('keyword')) {
+        $keyword = $this->request->getArgument('keyword');
+      }
 
+      $albums = $this->albumRepository->search($keyword);
+      $this->view->assign('albums', $albums)->assign('keyword', $keyword);
     }
 
     /**
@@ -71,7 +76,7 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function latestAction()
     {
-      $albums = $this->albumRepository->findLatest();
-      $this->view->assign('albums', $albums);
+        $albums = $this->albumRepository->findLatest();
+        $this->view->assign('albums', $albums);
     }
 }
