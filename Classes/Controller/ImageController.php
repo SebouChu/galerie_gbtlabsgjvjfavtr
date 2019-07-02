@@ -2,6 +2,8 @@
 
 namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Controller;
 
+use Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository\ImageRepository;
+
 /***
  *
  * This file is part of the "galerie_cantonnais" Extension for TYPO3 CMS.
@@ -25,6 +27,22 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Controller;
  */
 class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+    
+    /**
+     * imageRepository
+     *
+     * @var \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository\ImageRepository
+     */
+    protected $imageRepository = null;
+    
+    /**
+     * Constructor initialising injected dependencies
+     */
+    public function __construct(ImageRepository $imageRepository)
+    {
+        $this->imageRepository = $imageRepository;
+    }
+    
     /**
      * action latest
      *
@@ -32,12 +50,7 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function latestAction()
     {
-        $images = $this->createQuery()
-            ->setOrderings([
-                'publicationDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
-            ])
-            ->setLimit(5)
-            ->execute();
+        $images = $this->imageRepository->findLatest();
         $this->view->assign('images', $images);
     }
 }

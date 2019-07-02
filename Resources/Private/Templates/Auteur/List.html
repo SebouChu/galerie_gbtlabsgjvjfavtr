@@ -13,40 +13,10 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Listing for Auteur</h1>
+		<h1>Auteurs</h1>
 
 		<f:flashMessages />
 
-		<table  class="tx_galeriegbtlabsgjvjfavtr" >
-			<tr>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.lastname" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.firstname" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.job" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.address" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.email" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.phone_number" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.website" /></th>
-				<th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.biography" /></th>
-				<th> </th>
-				<th> </th>
-			</tr>
-
-			<f:for each="{auteurs}" as="auteur">
-				<tr>
-					<td><f:link.action action="show" arguments="{auteur : auteur}"> {auteur.lastname}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{auteur : auteur}"> {auteur.firstname}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{auteur : auteur}"> {auteur.job}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{auteur : auteur}"> {auteur.address}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{auteur : auteur}"> {auteur.email}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{auteur : auteur}"> {auteur.phoneNumber}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{auteur : auteur}"> {auteur.website}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{auteur : auteur}"> {auteur.biography}</f:link.action></td>
-					<td><f:link.action action="edit" arguments="{auteur : auteur}">Edit</f:link.action></td>
-					<td><f:link.action action="delete" arguments="{auteur : auteur}">Delete</f:link.action></td>
-				</tr>
-			</f:for>
-		</table>
-
-		<f:link.action action="new">New Auteur</f:link.action>
+		<f:render partial="Auteur/Table" arguments="{auteurs:auteurs}" />
 	</f:section>
 </html>

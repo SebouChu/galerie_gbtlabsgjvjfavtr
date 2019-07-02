@@ -1,4 +1,5 @@
 <?php
+
 namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
 
 /***
@@ -20,21 +21,18 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
  ***/
 
 /**
- * The repository for Albums
+ * The repository for Images
  */
-class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class ImageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+
     public function findLatest()
     {
-        return $this->createQuery()->setOrderings([
-            'publicationDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
-        ])->setLimit(5)->execute();
-    }
-
-    public function search(string $keyword = '')
-    {
-        $query = $this->createQuery();
-        return $query->matching($query->like('name', '%'.$keyword.'%'))
-                      ->execute();
+        return $this->createQuery()
+            ->setOrderings([
+                'publicationDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+            ])
+            ->setLimit(5)
+            ->execute();
     }
 }
