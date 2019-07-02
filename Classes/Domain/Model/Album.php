@@ -73,6 +73,14 @@ class Album extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $tags = null;
 
     /**
+     * Auteur
+     *
+     * @var \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Auteur
+     * @lazy
+     */
+    protected $auteur = null;
+
+    /**
      * Returns the name
      *
      * @return string $name
@@ -286,5 +294,26 @@ class Album extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTags(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tags)
     {
         $this->tags = $tags;
+    }
+
+    /**
+     * Returns the author
+     *
+     * @return \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Auteur $auteur
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
+     * Sets the author
+     *
+     * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Auteur $auteur
+     * @return void
+     */
+    public function setAuteur(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $auteur)
+    {
+        $this->auteur = $auteur;
     }
 }
