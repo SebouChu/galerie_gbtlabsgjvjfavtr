@@ -24,4 +24,14 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
  */
 class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    }
+
+  public function findLatest() {
+    return $this->createQuery()
+                ->setOrderings([
+                    'publicationDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+                  ])
+                ->setLimit(5)
+                ->execute();
+  }
+
+}
