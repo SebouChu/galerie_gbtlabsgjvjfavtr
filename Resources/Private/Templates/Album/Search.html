@@ -17,10 +17,7 @@
 
 		<f:flashMessages />
 
-		<f:form action="search" class="form-inline" style="margin-bottom: 2rem;">
-		  <f:form.textfield class="form-control" name="keyword" value="{keyword}" placeholder="Type here..." style="margin-right: 0.5rem;" />
-		  <f:form.submit value="Search" class="btn btn-success" />
-		</f:form>
+		<f:render partial="SearchForm" arguments="{keyword:keyword}" />
 
 		<f:render partial="Album/Table" arguments="{albums:albums, tags:tags}" />
 	</f:section>
