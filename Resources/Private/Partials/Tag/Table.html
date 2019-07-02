@@ -11,7 +11,7 @@
     <f:for each="{tags}" as="tag">
         <tr>
             <td>
-                <f:link.action action="show" arguments="{tag : tag}"> {tag.name}</f:link.action>
+                <p> {tag.name}</p>
             </td>
             <td>
                 <f:link.action action="delete" arguments="{tag : tag}" class="btn btn-danger btn-sm" style="margin: 0 0.5rem;">Delete</f:link.action>
