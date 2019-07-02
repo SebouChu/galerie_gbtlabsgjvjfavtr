@@ -17,7 +17,8 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Album' => 'search'
+                'Album' => 'search',
+                'Category' => 'search'
             ]
         );
 
