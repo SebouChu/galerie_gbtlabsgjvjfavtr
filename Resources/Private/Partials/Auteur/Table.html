@@ -26,10 +26,10 @@
     <f:for each="{auteurs}" as="auteur">
         <tr>
             <td>
-                <f:link.action action="show" arguments="{auteur : auteur}"> {auteur.lastname}</f:link.action>
+                {auteur.lastname}
             </td>
             <td>
-                <f:link.action action="show" arguments="{auteur : auteur}"> {auteur.firstname}</f:link.action>
+                {auteur.firstname}
             </td>
             <td>
                 {auteur.job}
@@ -44,6 +44,9 @@
                 <a href="{auteur.website}">{auteur.website}</a>
             </td>
             <td>
+                <f:link.action action="show" arguments="{auteur : auteur}" class="btn btn-default btn-sm"
+                               style="margin: 0 0.5rem;">Show
+                </f:link.action>
                 <f:link.action action="edit" arguments="{auteur : auteur}" class="btn btn-primary btn-sm"
                                style="margin: 0 0.5rem;">Edit
                 </f:link.action>
