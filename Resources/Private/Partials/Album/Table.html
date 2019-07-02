@@ -12,7 +12,7 @@
     <f:for each="{albums}" as="album">
       <tr>
         <td><f:link.action action="show" arguments="{album : album}"> {album.name}</f:link.action></td>
-        <td><f:format.striptags>{album.description}</f:format.striptags></td>
+        <td><f:format.stripTags>{album.description}</f:format.stripTags></td>
         <td>{album.publicationDate -> f:format.date()}</td>
         <td>
           <f:link.action action="edit" arguments="{album : album}" class="btn btn-primary btn-sm" style="margin: 0 0.5rem;">Edit</f:link.action>
