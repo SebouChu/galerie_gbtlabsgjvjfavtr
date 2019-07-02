@@ -26,7 +26,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * Nom
-     *
+     * 
      * @var string
      * @validate NotEmpty
      */
@@ -34,21 +34,21 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Largeur
-     *
+     * 
      * @var int
      */
     protected $width = 0;
 
     /**
      * Hauteur
-     *
+     * 
      * @var int
      */
     protected $height = 0;
 
     /**
      * Fichier
-     *
+     * 
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      * @validate NotEmpty
      * @cascade remove
@@ -57,21 +57,21 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Lieu de prise
-     *
+     * 
      * @var string
      */
     protected $place = '';
 
     /**
      * Date de prise
-     *
+     * 
      * @var \DateTime
      */
     protected $shootDateTime = '';
 
     /**
      * publicationDate
-     *
+     * 
      * @var \DateTime
      * @validate NotEmpty
      */
@@ -79,7 +79,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Tags
-     *
+     * 
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag>
      * @lazy
      */
@@ -87,7 +87,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the name
-     *
+     * 
      * @return string $name
      */
     public function getName()
@@ -97,7 +97,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the name
-     *
+     * 
      * @param string $name
      * @return void
      */
@@ -108,7 +108,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the width
-     *
+     * 
      * @return int $width
      */
     public function getWidth()
@@ -118,7 +118,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the width
-     *
+     * 
      * @param int $width
      * @return void
      */
@@ -129,7 +129,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the height
-     *
+     * 
      * @return int $height
      */
     public function getHeight()
@@ -139,7 +139,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the height
-     *
+     * 
      * @param int $height
      * @return void
      */
@@ -150,7 +150,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the place
-     *
+     * 
      * @return string $place
      */
     public function getPlace()
@@ -160,7 +160,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the place
-     *
+     * 
      * @param string $place
      * @return void
      */
@@ -171,7 +171,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the publicationDate
-     *
+     * 
      * @return \DateTime $publicationDate
      */
     public function getPublicationDate()
@@ -181,7 +181,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the publicationDate
-     *
+     * 
      * @param \DateTime $publicationDate
      * @return void
      */
@@ -192,7 +192,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the shootDateTime
-     *
+     * 
      * @return \DateTime shootDateTime
      */
     public function getShootDateTime()
@@ -202,7 +202,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the shootDateTime
-     *
+     * 
      * @param string $shootDateTime
      * @return void
      */
@@ -213,7 +213,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the file
-     *
+     * 
      * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $file
      */
     public function getFile()
@@ -223,7 +223,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the file
-     *
+     * 
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $file
      * @return void
      */
@@ -246,7 +246,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Do not modify this method!
      * It will be rewritten on each save in the extension builder
      * You may modify the constructor of this class instead
-     *
+     * 
      * @return void
      */
     protected function initStorageObjects()
@@ -256,7 +256,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Adds a Tag
-     *
+     * 
      * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $tag
      * @return void
      */
@@ -267,7 +267,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Removes a Tag
-     *
+     * 
      * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $tagToRemove The Tag to be removed
      * @return void
      */
@@ -278,7 +278,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the tags
-     *
+     * 
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag> $tags
      */
     public function getTags()
@@ -288,7 +288,7 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the tags
-     *
+     * 
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag> $tags
      * @return void
      */
