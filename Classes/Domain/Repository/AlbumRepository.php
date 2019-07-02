@@ -1,4 +1,5 @@
 <?php
+
 namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
 
 /***
@@ -23,5 +24,4 @@ namespace Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Repository;
  * The repository for Albums
  */
 class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
-{
-    }
+{ }

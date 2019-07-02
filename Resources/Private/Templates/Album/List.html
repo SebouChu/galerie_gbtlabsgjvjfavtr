@@ -29,7 +29,7 @@
 			<f:for each="{albums}" as="album">
 				<tr>
 					<td><f:link.action action="show" arguments="{album : album}"> {album.name}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{album : album}"> {album.description}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{album : album}"> {album.description -> f:format.htmlentitiesDecode(encoding: 'UTF-8')}</f:link.action></td>
 					<td><f:link.action action="show" arguments="{album : album}"> {album.publicationDate -> f:format.date()}</f:link.action></td>
 					<td><f:link.action action="edit" arguments="{album : album}">Edit</f:link.action></td>
 					<td><f:link.action action="delete" arguments="{album : album}">Delete</f:link.action></td>
