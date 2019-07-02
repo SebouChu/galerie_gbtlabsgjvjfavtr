@@ -12,9 +12,6 @@
             <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.job"/>
         </th>
         <th>
-            <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.address"/>
-        </th>
-        <th>
             <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.email"/>
         </th>
         <th>
@@ -22,9 +19,6 @@
         </th>
         <th>
             <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.website"/>
-        </th>
-        <th>
-            <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.biography"/>
         </th>
         <th></th>
     </tr>
@@ -41,9 +35,6 @@
                 {auteur.job}
             </td>
             <td>
-                {auteur.address}
-            </td>
-            <td>
                 <a href="mailto:{auteur.email}">{auteur.email}</a>
             </td>
             <td>
@@ -51,9 +42,6 @@
             </td>
             <td>
                 <a href="{auteur.website}">{auteur.website}</a>
-            </td>
-            <td>
-                <f:format.stripTags>{auteur.biography}</f:format.stripTags>
             </td>
             <td>
                 <f:link.action action="edit" arguments="{auteur : auteur}" class="btn btn-primary btn-sm"
