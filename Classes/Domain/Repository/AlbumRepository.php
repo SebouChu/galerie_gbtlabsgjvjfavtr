@@ -31,7 +31,7 @@ class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         ])->setLimit(5)->execute();
     }
 
-    public function search(string $keyword = '')
+    public function search(string $keyword)
     {
         $query = $this->createQuery();
         return $query->matching($query->like('name', '%'.$keyword.'%'))

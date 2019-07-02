@@ -13,17 +13,15 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Categories</h1>
+		<h1>Categories - Search Results for "{keyword}"</h1>
 
 		<f:flashMessages />
 
-		<f:form action="search" arguments="{keyword}" class="form-inline" style="margin-bottom: 2rem;">
-			<f:form.textfield class="form-control" property="keyword" placeholder="Type here..." style="margin-right: 0.5rem;" />
-			<f:form.submit value="Search" class="btn btn-success" />
+		<f:form action="search" class="form-inline" style="margin-bottom: 2rem;">
+		  <f:form.textfield class="form-control" name="keyword" value="{keyword}" placeholder="Type here..." style="margin-right: 0.5rem;" />
+		  <f:form.submit value="Search" class="btn btn-success" />
 		</f:form>
-		
-		<f:render partial="Category/Table" arguments="{categories:categories}" />
 
-		<f:link.action action="new">New Category</f:link.action>
+		<f:render partial="Category/Table" arguments="{categories:categories}" />
 	</f:section>
 </html>
