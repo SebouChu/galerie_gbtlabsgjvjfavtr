@@ -1,61 +1,14 @@
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<table class="tx_galeriegbtlabsgjvjfavtr table table-striped table-hover">
-    <tr>
-        <th>
-            <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.lastname"/>
-        </th>
-        <th>
-            <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.firstname"/>
-        </th>
-        <th>
-            <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.job"/>
-        </th>
-        <th>
-            <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.email"/>
-        </th>
-        <th>
-            <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.phone_number"/>
-        </th>
-        <th>
-            <f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur.website"/>
-        </th>
-        <th></th>
-    </tr>
 
-    <f:for each="{auteurs}" as="auteur">
-        <tr>
-            <td>
-                {auteur.lastname}
-            </td>
-            <td>
-                {auteur.firstname}
-            </td>
-            <td>
-                {auteur.job}
-            </td>
-            <td>
-                <a href="mailto:{auteur.email}">{auteur.email}</a>
-            </td>
-            <td>
-                <a href="tel:{auteur.phoneNumber}">{auteur.phoneNumber}</a>
-            </td>
-            <td>
-                <a href="{auteur.website}">{auteur.website}</a>
-            </td>
-            <td>
-                <f:link.action action="show" arguments="{auteur : auteur}" class="btn btn-default btn-sm"
-                               style="margin: 0 0.5rem;">Show
-                </f:link.action>
-                <f:link.action action="edit" arguments="{auteur : auteur}" class="btn btn-primary btn-sm"
-                               style="margin: 0 0.5rem;">Edit
-                </f:link.action>
-                <f:link.action action="delete" arguments="{auteur : auteur}" class="btn btn-danger btn-sm"
-                               style="margin: 0 0.5rem;">Delete
-                </f:link.action>
-            </td>
-        </tr>
-    </f:for>
-</table>
-
+<f:for each="{auteurs}" as="auteur">
+    <li>
+        <f:link.action action="show" arguments="{auteur : auteur}">{auteur.lastname} {auteur.firstname}
+        </f:link.action>
+        &ndash;
+        {auteur.job}
+        &ndash;
+        <a href="{auteur.website}">{auteur.website}</a>
+    </li>
+</f:for>
 </html>

@@ -53,4 +53,22 @@ class AuteurController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $this->view->assign('auteur', $auteur);
     }
+
+    /**
+     * action search
+     *
+     * @param $keyword
+     * @return void
+     */
+    public function searchAction()
+    {
+        if ($this->request->hasArgument('keyword')) {
+            $keyword = $this->request->getArgument('keyword');
+        } else {
+            $keyword = '';
+        }
+
+        $auteurs = $this->auteurRepository->search($keyword);
+        $this->view->assign('auteurs', $auteurs)->assign('keyword', $keyword);
+    }
 }
