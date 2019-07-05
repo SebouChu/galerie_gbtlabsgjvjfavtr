@@ -649,9 +649,9 @@
         "plugins": [
             {
                 "actions": {
-                    "controllerActionCombinations": "Image => latest,new,create\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest,addTag\nTag => list,new,create,delete",
+                    "controllerActionCombinations": "Image => latest,new,create\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest,addTag\nTag => list",
                     "noncacheableActions": "Album => search",
-                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search; Album->addTag;\nListe auteurs\nAuteur->list;\nListe categories\nCategory->list;\nListe tags\nTag->list"
+                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search; Album->addTag;\nListe auteurs\nAuteur->list;\nListe categories\nCategory->list;\nListe tags\nTag->list;"
                 },
                 "description": "Galerie photo de qualit\u00e9",
                 "key": "plugin",
