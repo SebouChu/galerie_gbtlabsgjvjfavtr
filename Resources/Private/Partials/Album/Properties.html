@@ -4,7 +4,7 @@
 <h3><b>Details album</b></h3>
 <br>
 <div>
-    <h4><b>Auteur : </b><f:link.action action="show" arguments="{album.auteur : album.auteur}">{album.auteur.firstname} {album.auteur.lastname}</f:link.action></h4>
+    <h4><b>Auteur : </b><f:link.action action="show" controller="Auteur" arguments="{auteur : album.auteur}">{album.auteur.firstname} {album.auteur.lastname}</f:link.action></h4>
 </div>
 <div><p><h4><b>Description : </b>{album.description -> f:format.htmlentitiesDecode(encoding: 'UTF-8')}</h4></div>
 </p></div>
