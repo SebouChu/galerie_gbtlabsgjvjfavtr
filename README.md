@@ -43,4 +43,7 @@ Notre équipe de CHOC se compose de Sebouchou, Jessica, Julien, La Patate et Le 
       - Plugin : 'galerie_photo'
       - Select function : 'Liste tags'
 
-**IMPORTANT** : Pour chaque Page content du plugin, ne pas oublier d'ajouter le DOSSIER "galerie photo" en source de données.
+**IMPORTANT** : 
+- Pour chaque Page content du plugin, ne pas oublier d'ajouter le DOSSIER "galerie photo" en source de données.
+- Aller dans Template > 'Edit the whole template record' > Includes et mettre galerie_cantonnais à gauche dans 'Selected items'
+

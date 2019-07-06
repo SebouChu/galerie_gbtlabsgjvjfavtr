@@ -19,7 +19,7 @@
 
 		<f:render partial="SearchForm" arguments="{keyword:keyword}" />
 
-		<f:widget.paginate objects="{albums}" as="paginatedAlbums" configuration="{itemsPerPage: 10, insertBelow: 1, maximumNumberOfLinks: 10}">
+		<f:widget.paginate objects="{albums}" as="paginatedAlbums" configuration="{settings.pagination}">
 			<f:render partial="Album/Grid" arguments="{albums:paginatedAlbums, tags:tags}" />
 		</f:widget.paginate>
 	</f:section>
