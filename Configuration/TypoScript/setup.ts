@@ -59,4 +59,18 @@ plugin.tx_galeriegbtlabsgjvjfavtr._CSS_DEFAULT_STYLE (
         background-color: #10a0cb;
         color: white;
     }
+
+    /** Liste des tags dans un ul**/
+    .liste-tags {
+        padding: 0;
+    }
+
+    .liste-tags li {
+        list-style: none;
+        padding: 10px 10px;
+    }
+
+    .liste-tags li:nth-child(2n) {
+        background-color: #f8f8f8;
+    }
 )
