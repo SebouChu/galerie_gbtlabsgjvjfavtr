@@ -6,7 +6,7 @@ Bienvenue à tous dans ce super projet de Gallerie Cantonnais, dans lequel le bu
 
 ## Composition de l'équipe
 
-Notre équipe de CHOC se composer de Sebouchou, Jessica, Julien, La Patate et Le Patate, Théo, Thibault et Gaétan. Bienvenue à eux !
+Notre équipe de CHOC se compose de Sebouchou, Jessica, Julien, La Patate et Le Patate, Théo, Thibault et Gaétan. Bienvenue à eux !
 
 ## Structure nécessaire
 
