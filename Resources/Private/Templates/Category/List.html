@@ -21,9 +21,7 @@
 			<f:form.textfield class="form-control" property="keyword" placeholder="Type here..." style="margin-right: 0.5rem;" />
 			<f:form.submit value="Search" class="btn btn-success" />
 		</f:form>
-		
-		<f:render partial="Category/Grid" arguments="{categories:categories}" />
 
-		<f:link.action action="new">New Category</f:link.action>
+		<f:render partial="Category/Grid" arguments="{categories:categories}" />
 	</f:section>
 </html>

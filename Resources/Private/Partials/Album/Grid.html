@@ -1,21 +1,43 @@
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
-  <table class="tx_galeriegbtlabsgjvjfavtr table table-striped table-hover" >
-    <tr>
-      <th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.name" /></th>
-      <th><f:translate key="tx_galeriegbtlabsgjvjfavtr_domain_model_album.publication_date" /></th>
-      <th></th>
-    </tr>
-
+  <div class="row">
     <f:for each="{albums}" as="album">
-      <tr>
-        <td><f:link.action action="show" arguments="{album : album}"> {album.name}</f:link.action></td>
-        <td>{album.publicationDate -> f:format.date()}</td>
-        <td>
-          <f:link.action action="edit" arguments="{album : album}" class="btn btn-primary btn-sm" style="margin: 0 0.5rem;">Edit</f:link.action>
-          <f:link.action action="delete" arguments="{album : album}" class="btn btn-danger btn-sm" style="margin: 0 0.5rem;">Delete</f:link.action>
-        </td>
-      </tr>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            {album.name}
+          </div>
+          <div class="panel-body">
+            <p>
+              <f:format.stripTags>{album.description}</f:format.stripTags>
+            </p>
+
+            <p style="font-size: 75%;">
+              Categories:
+              <f:for each="{album.categories}" as="category" iteration="catIterator">
+                <f:link.action pageUid="tx_galerie_categories" controller="Category" action="show" arguments="{category : category}">
+                  {category.name}
+                </f:link.action>
+                <f:if condition="!{catIterator.isLast}">;</f:if>
+              </f:for>
+            <p>
+
+            <p style="font-size: 75%;">
+              Tags:
+              <f:for each="{album.tags}" as="tag" iteration="tagIterator">
+                <f:link.action pageUid="tx_galerie_tags" controller="Tag" action="show" arguments="{tag : tag}">
+                  {tag.name}
+                </f:link.action>
+                <f:if condition="!{tagIterator.isLast}">;</f:if>
+              </f:for>
+            <p>
+
+            <p style="font-size: 75%;">Published at {album.publicationDate -> f:format.date()}<p>
+            <p class="text-right">
+              <f:link.action pageUid="tx_galerie_albums" controller="Album" action="show" arguments="{album : album}">See details</f:link.action>
+            </p>
+          </div>
+        </div>
+      </div>
     </f:for>
-  </table>
+  </div>
 </html>

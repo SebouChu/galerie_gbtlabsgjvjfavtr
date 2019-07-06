@@ -1,6 +1,7 @@
-<div style="display: grid; grid-template-columns:repeat(auto-fit, minmax(0,1fr)); grid-column-gap: 1rem">
-    <f:for each="{images}" as="image" iteration="it">
-        <f:image image="{image.file}" class="img-thumbnail"
-            style="margin: 2rem 0rem; object-fit: cover; max-height: 15rem; width: 100%;" />
+<div class="row">
+    <f:for each="{images}" as="image">
+      <div class="col-md-4">
+        <f:image image="{image.file}" class="img-thumbnail" />
+      </div>
     </f:for>
 </div>

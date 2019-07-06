@@ -28,7 +28,7 @@ class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     {
         return $this->createQuery()->setOrderings([
             'publicationDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
-        ])->setLimit(5)->execute();
+        ])->setLimit(6)->execute();
     }
 
     public function search(string $keyword)

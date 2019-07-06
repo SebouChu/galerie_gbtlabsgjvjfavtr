@@ -32,7 +32,7 @@ class ImageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             ->setOrderings([
                 'publicationDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
             ])
-            ->setLimit(5)
+            ->setLimit(6)
             ->execute();
     }
 }
