@@ -5,10 +5,12 @@
     <li>
         <f:link.action action="show" arguments="{auteur : auteur}">{auteur.lastname} {auteur.firstname}
         </f:link.action>
-        &ndash;
-        {auteur.job}
-        &ndash;
-        <a href="{auteur.website}">{auteur.website}</a>
+        <f:if condition="{auteur.job}">
+            &ndash; {auteur.job}
+        </f:if>
+        <f:if condition="{auteur.website}">
+            &ndash; <a href="{auteur.website}">{auteur.website}</a>
+        </f:if>
     </li>
 </f:for>
 </html>
