@@ -19,10 +19,10 @@ return [
         'iconfile' => 'EXT:galerie_gbtlabsgjvjfavtr/Resources/Public/Icons/tx_galeriegbtlabsgjvjfavtr_domain_model_album.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, publication_date, images, categories, tags',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, auteur, publication_date, images, categories, tags',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, publication_date, images, categories, tags, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, auteur, publication_date, images, categories, tags, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -131,7 +131,19 @@ return [
                 'rows' => 15,
                 'eval' => 'trim,required',
             ],
-            
+
+        ],
+        'auteur' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:galerie_gbtlabsgjvjfavtr/Resources/Private/Language/locallang_db.xlf:tx_galeriegbtlabsgjvjfavtr_domain_model_album.auteur',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_galeriegbtlabsgjvjfavtr_domain_model_auteur',
+                'size' => 1,
+                'maxitems' => 1,
+                'eval' => 'required'
+            ],
         ],
         'publication_date' => [
             'exclude' => false,
@@ -188,7 +200,7 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
         'tags' => [
             'exclude' => true,
@@ -214,13 +226,7 @@ return [
                     ],
                 ],
             ],
-            
-        ],
-    
-        'auteur' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
+
+        ]
     ],
 ];

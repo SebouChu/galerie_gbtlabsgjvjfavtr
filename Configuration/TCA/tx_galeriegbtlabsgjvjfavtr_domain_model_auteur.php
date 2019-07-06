@@ -185,7 +185,7 @@ return [
                 'rows' => 15,
                 'eval' => 'trim',
             ],
-            
+
         ],
         'albums' => [
             'exclude' => true,
@@ -223,6 +223,6 @@ return [
             ],
 
         ],
-    
+
     ],
 ];

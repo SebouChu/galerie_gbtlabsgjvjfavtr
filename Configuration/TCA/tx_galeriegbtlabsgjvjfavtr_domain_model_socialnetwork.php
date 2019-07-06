@@ -122,14 +122,17 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['-- Label --', 0],
+                    ['Twitter', 0],
+                    ['Facebook', 1],
+                    ['Instagram', 2],
+                    ['LinkedIn', 3]
                 ],
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => 'required'
             ],
         ],
-    
+
         'auteur' => [
             'config' => [
                 'type' => 'passthrough',
