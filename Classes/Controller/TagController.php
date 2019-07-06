@@ -42,4 +42,15 @@ class TagController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $tags = $this->tagRepository->findAll();
         $this->view->assign('tags', $tags);
     }
+
+    /**
+     * action show
+     *
+     * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $tag
+     * @return void
+     */
+    public function showAction(\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $tag)
+    {
+        $this->view->assign('tag', $tag);
+    }
 }

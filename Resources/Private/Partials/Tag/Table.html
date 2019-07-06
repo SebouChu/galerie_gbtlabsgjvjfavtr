@@ -9,10 +9,9 @@
     <f:for each="{tags}" as="tag">
         <tr>
             <td>
-                <p> {tag.name}</p>
+                <f:link.action action="show" arguments="{tag : tag}">{tag.name}</f:link.action>
             </td>
         </tr>
     </f:for>
 </table>
-
 </html>
