@@ -1,17 +1,6 @@
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:layout name="Default" />
 
-	This Template is responsible for creating a table of domain objects.
-
-	If you modify this template, do not forget to change the overwrite settings
-	in /Configuration/ExtensionBuilder/settings.yaml:
-	  Resources:
-		Private:
-		  Templates:
-			List.html: keep
-
-	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
 	<f:section name="content">
 		<h1>Categories - Search Results for "{keyword}"</h1>
 
@@ -22,6 +11,6 @@
 		  <f:form.submit value="Search" class="btn btn-success" />
 		</f:form>
 
-		<f:render partial="Category/Table" arguments="{categories:categories}" />
+		<f:render partial="Category/Grid" arguments="{categories:categories}" />
 	</f:section>
 </html>
