@@ -17,6 +17,8 @@
 
 		<f:flashMessages />
 
-		<f:render partial="Tag/Grid" arguments="{tags:tags}" />
+		<f:widget.paginate objects="{tags}" as="paginatedTags" configuration="{settings.pagination}">
+			<f:render partial="Tag/Grid" arguments="{tags:paginatedTags}" />
+		</f:widget.paginate>
 	</f:section>
 </html>
