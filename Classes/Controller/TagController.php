@@ -42,40 +42,4 @@ class TagController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $tags = $this->tagRepository->findAll();
         $this->view->assign('tags', $tags);
     }
-
-    /**
-     * action new
-     *
-     * @return void
-     */
-    public function newAction()
-    {
-
-    }
-
-    /**
-     * action create
-     *
-     * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $newTag
-     * @return void
-     */
-    public function createAction(\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $newTag)
-    {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->tagRepository->add($newTag);
-        $this->redirect('list');
-    }
-
-    /**
-     * action delete
-     *
-     * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $tag
-     * @return void
-     */
-    public function deleteAction(\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag $tag)
-    {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->tagRepository->remove($tag);
-        $this->redirect('list');
-    }
 }
