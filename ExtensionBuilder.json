@@ -579,7 +579,7 @@
     ],
     "properties": {
         "backendModules": [],
-        "description": "Gallerie d'images pour le projet de Typo3 DAWIN ",
+        "description": "Galerie d'images pour le projet de Typo3 DAWIN ",
         "emConf": {
             "category": "plugin",
             "custom_category": "",

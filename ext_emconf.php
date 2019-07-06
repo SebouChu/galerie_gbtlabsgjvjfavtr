@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'galerie_cantonnais',
-    'description' => 'Gallerie d\'images pour le projet de Typo3 DAWIN ',
+    'description' => 'Galerie d\'images pour le projet de Typo3 DAWIN ',
     'category' => 'plugin',
     'author' => 'Gaétan BASILE, Théo LECOQ, Aurore BAUME, Sebastien GAYA, Julien VANELIAN, Jessica FERREIRA, Alexandre VIAS, Thibault ROBERT',
     'author_email' => 'gaetan.basile.1@etu.u-bordeaux',

@@ -1,8 +1,8 @@
-# Super projet de Gallerie Cantonnais
+# Super projet de Galerie Cantonnais
 
 ## Présentation
 
-Bienvenue à tous dans ce super projet de Gallerie Cantonnais, dans lequel le but est de nous amuser tout en progressant et en réalisant une gallerie d'images.
+Bienvenue à tous dans ce super projet de Galerie Cantonnais, dans lequel le but est de nous amuser tout en progressant et en réalisant une galerie d'images.
 
 ## Composition de l'équipe
 
