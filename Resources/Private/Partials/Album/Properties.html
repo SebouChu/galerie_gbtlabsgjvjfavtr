@@ -12,12 +12,23 @@
     <h4><p><b>Date de création : </b>{album.publicationDate -> f:format.date()}</p></h4>
 </div>
 <br>
-<ul>
-  <f:for each="{album.tags}" as="tag" iteration="it">
-      <li>
-          {tag.name}
-      </li>
+<p>
+  Categories:
+  <f:for each="{album.categories}" as="category" iteration="tagIterator">
+    <f:link.action pageUid="tx_galerie_categories" controller="Category" action="show" arguments="{category : category}">
+      {category.name}
+    </f:link.action>
+    <f:if condition="!{tagIterator.isLast}">;</f:if>
   </f:for>
-</ul>
+<p>
+<p>
+  Tags:
+  <f:for each="{album.tags}" as="tag" iteration="tagIterator">
+    <f:link.action pageUid="tx_galerie_tags" controller="Tag" action="show" arguments="{tag : tag}">
+      {tag.name}
+    </f:link.action>
+    <f:if condition="!{tagIterator.isLast}">;</f:if>
+  </f:for>
+<p>
 <br>
 </html>

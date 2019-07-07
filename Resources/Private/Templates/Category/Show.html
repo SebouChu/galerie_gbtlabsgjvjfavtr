@@ -18,11 +18,12 @@
 		<f:flashMessages />
 		<f:render partial="Category/Properties" arguments="{category:category}" />
 
-		<ul>
-	    <f:for each="{category.albums}" as="album">
-    	  <li>{album.name}</li>
-	    </f:for>
-		</ul>
+		<h3>Albums de cette catégorie</h3>
+
+		<f:widget.paginate objects="{category.albums}" as="paginatedAlbums" configuration="{settings.pagination}">
+			<f:render partial="Album/Grid" arguments="{albums:paginatedAlbums, tags:tags}" />
+		</f:widget.paginate>
+
 		<f:link.action action="list">Back to list</f:link.action><br />
 	</f:section>
 </html>
