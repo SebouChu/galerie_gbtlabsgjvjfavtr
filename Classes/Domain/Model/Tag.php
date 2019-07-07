@@ -41,6 +41,14 @@ class Tag extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $albums = null;
 
     /**
+     * Albums
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image>
+     * @lazy
+     */
+    protected $images = null;
+
+    /**
      * Returns the name
      *
      * @return string $name
@@ -81,6 +89,7 @@ class Tag extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected function initStorageObjects()
     {
         $this->albums = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -124,5 +133,48 @@ class Tag extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setAlbums(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $albums)
     {
         $this->albums = $albums;
+    }
+
+    /**
+     * Adds an Image
+     *
+     * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image $image
+     * @return void
+     */
+    public function addImage(\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image $image)
+    {
+        $this->images->attach($image);
+    }
+
+    /**
+     * Removes an Image
+     *
+     * @param \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image $imageToRemove The Image to be removed
+     * @return void
+     */
+    public function removeImage(\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image $imageToRemove)
+    {
+        $this->images->detach($imageToRemove);
+    }
+
+    /**
+     * Returns the images
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image> $images
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * Sets the images
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image> $images
+     * @return void
+     */
+    public function setImages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $images)
+    {
+        $this->images = $images;
     }
 }

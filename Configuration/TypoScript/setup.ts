@@ -32,8 +32,9 @@ plugin.tx_galeriegbtlabsgjvjfavtr_plugin {
 
 plugin.tx_galeriegbtlabsgjvjfavtr._CSS_DEFAULT_STYLE (
     .f3-widget-paginator {
+        margin-top: 1rem;
         padding: 0;
-        float: right;
+        text-align: right;
     }
 
     .f3-widget-paginator li {

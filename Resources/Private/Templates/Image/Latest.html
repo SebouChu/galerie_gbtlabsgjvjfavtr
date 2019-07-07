@@ -1,7 +1,1 @@
-<div class="row">
-    <f:for each="{images}" as="image">
-      <div class="col-md-4">
-        <f:image image="{image.file}" class="img-thumbnail" />
-      </div>
-    </f:for>
-</div>
+<f:render partial="Image/Grid" arguments="{images:images}" />
