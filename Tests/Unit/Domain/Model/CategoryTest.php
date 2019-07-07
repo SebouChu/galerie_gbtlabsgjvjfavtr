@@ -80,4 +80,67 @@ class CategoryTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             $this->subject
         );
     }
+
+    /**
+     * @test
+     */
+    public function getAlbumsReturnsInitialValueForAlbum()
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getAlbums()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setAlbumsForObjectStorageContainingAlbumSetsAlbums()
+    {
+        $album = new \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Album();
+        $objectStorageHoldingExactlyOneAlbums = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneAlbums->attach($album);
+        $this->subject->setAlbums($objectStorageHoldingExactlyOneAlbums);
+
+        self::assertAttributeEquals(
+            $objectStorageHoldingExactlyOneAlbums,
+            'albums',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function addAlbumToObjectStorageHoldingAlbums()
+    {
+        $album = new \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Album();
+        $albumsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $albumsObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($album));
+        $this->inject($this->subject, 'albums', $albumsObjectStorageMock);
+
+        $this->subject->addAlbum($album);
+    }
+
+    /**
+     * @test
+     */
+    public function removeAlbumFromObjectStorageHoldingAlbums()
+    {
+        $album = new \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Album();
+        $albumsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $albumsObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($album));
+        $this->inject($this->subject, 'albums', $albumsObjectStorageMock);
+
+        $this->subject->removeAlbum($album);
+    }
 }

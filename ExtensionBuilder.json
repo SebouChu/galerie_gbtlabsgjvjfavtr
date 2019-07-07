@@ -315,7 +315,19 @@
                     ]
                 },
                 "relationGroup": {
-                    "relations": []
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "Albums\n",
+                            "relationName": "albums",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectMultipleSideBySide",
+                            "uid": "1496485785567"
+                        }
+                    ]
                 }
             }
         },
@@ -803,10 +815,22 @@
                 "terminal": "SOURCES",
                 "uid": "1347940378497"
             }
+        },
+        {
+            "src": {
+                "moduleId": 2,
+                "terminal": "relationWire_0",
+                "uid": "1496485785567"
+            },
+            "tgt": {
+                "moduleId": 1,
+                "terminal": "SOURCES",
+                "uid": "1398139365412"
+            }
         }
     ],
     "log": {
-        "last_modified": "2019-07-07 11:35",
+        "last_modified": "2019-07-07 03:11",
         "extension_builder_version": "8.10.3",
         "be_user": " (1)"
     }

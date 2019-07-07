@@ -17,6 +17,12 @@
 
 		<f:flashMessages />
 		<f:render partial="Category/Properties" arguments="{category:category}" />
+
+		<ul>
+	    <f:for each="{category.albums}" as="album">
+    	  <li>{album.name}</li>
+	    </f:for>
+		</ul>
 		<f:link.action action="list">Back to list</f:link.action><br />
 	</f:section>
 </html>
