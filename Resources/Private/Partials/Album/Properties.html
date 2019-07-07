@@ -12,6 +12,13 @@
     <h4><p><b>Date de création : </b>{album.publicationDate -> f:format.date()}</p></h4>
 </div>
 <br>
+<ul>
+  <f:for each="{album.tags}" as="tag" iteration="it">
+      <li>
+          {tag.name}
+      </li>
+  </f:for>
+</ul>
 <br>
 <table class="tx_galeriegbtlabsgjvjfavtr table table-striped table-hover">
     <tr>

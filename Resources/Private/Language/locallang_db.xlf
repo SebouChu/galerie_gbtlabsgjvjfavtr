@@ -69,6 +69,9 @@
 			<trans-unit id="tx_galeriegbtlabsgjvjfavtr_domain_model_tag.name">
 				<source>Name</source>
 			</trans-unit>
+			<trans-unit id="tx_galeriegbtlabsgjvjfavtr_domain_model_tag.albums">
+				<source>Albums</source>
+			</trans-unit>
 			<trans-unit id="tx_galeriegbtlabsgjvjfavtr_domain_model_auteur">
 				<source>Auteur</source>
 			</trans-unit>

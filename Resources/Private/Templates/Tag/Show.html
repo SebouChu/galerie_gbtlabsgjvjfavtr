@@ -17,6 +17,12 @@
 
 		<h3>Albums contenant le tag '{tag.name}'</h3>
 
+		<ul>
+			<f:for each="{tag.albums}" as="album" iteration="it">
+				<li>{album.name}</li>
+			</f:for>
+		</ul>
+
 		<h3>Photos contenant le tag '{tag.name}'</h3>
 
 		<f:flashMessages />
