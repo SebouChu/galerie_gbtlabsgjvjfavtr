@@ -17,6 +17,12 @@
 
 		<f:flashMessages />
 		<f:render partial="Album/Properties" arguments="{album:album}" />
+
+		<h2>Images</h2>
+		<f:widget.paginate objects="{album.images}" as="paginatedImages" configuration="{settings.pagination}">
+			<f:render partial="Image/Grid" arguments="{images:paginatedImages}" />
+		</f:widget.paginate>
+
 		<f:link.action action="list" class="btn btn-sm btn-primary">Retour liste d'Albums</f:link.action><br />
 	</f:section>
 </html>

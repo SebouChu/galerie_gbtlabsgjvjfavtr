@@ -22,6 +22,8 @@
 			<f:form.submit value="Search" class="btn btn-success" />
 		</f:form>
 
-		<f:render partial="Category/Grid" arguments="{categories:categories}" />
+		<f:widget.paginate objects="{categories}" as="paginatedCategories" configuration="{settings.pagination}">
+			<f:render partial="Category/Grid" arguments="{categories:paginatedCategories}" />
+		</f:widget.paginate>
 	</f:section>
 </html>
