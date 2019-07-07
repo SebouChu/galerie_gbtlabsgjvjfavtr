@@ -34,21 +34,4 @@ class ImageControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         parent::tearDown();
     }
 
-    /**
-     * @test
-     */
-    public function createActionAddsTheGivenImageToImageRepository()
-    {
-        $image = new \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Image();
-
-        $imageRepository = $this->getMockBuilder(\::class)
-            ->setMethods(['add'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $imageRepository->expects(self::once())->method('add')->with($image);
-        $this->inject($this->subject, 'imageRepository', $imageRepository);
-
-        $this->subject->createAction($image);
-    }
 }

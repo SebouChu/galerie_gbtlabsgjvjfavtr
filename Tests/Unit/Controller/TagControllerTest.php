@@ -61,36 +61,14 @@ class TagControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function createActionAddsTheGivenTagToTagRepository()
+    public function showActionAssignsTheGivenTagToView()
     {
         $tag = new \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag();
 
-        $tagRepository = $this->getMockBuilder(\::class)
-            ->setMethods(['add'])
-            ->disableOriginalConstructor()
-            ->getMock();
+        $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
+        $this->inject($this->subject, 'view', $view);
+        $view->expects(self::once())->method('assign')->with('tag', $tag);
 
-        $tagRepository->expects(self::once())->method('add')->with($tag);
-        $this->inject($this->subject, 'tagRepository', $tagRepository);
-
-        $this->subject->createAction($tag);
-    }
-
-    /**
-     * @test
-     */
-    public function deleteActionRemovesTheGivenTagFromTagRepository()
-    {
-        $tag = new \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Tag();
-
-        $tagRepository = $this->getMockBuilder(\::class)
-            ->setMethods(['remove'])
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $tagRepository->expects(self::once())->method('remove')->with($tag);
-        $this->inject($this->subject, 'tagRepository', $tagRepository);
-
-        $this->subject->deleteAction($tag);
+        $this->subject->showAction($tag);
     }
 }

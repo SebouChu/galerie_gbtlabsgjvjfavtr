@@ -43,6 +43,9 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     protected $tagRepository = null;
 
+    /**
+     * @param TagRepository $tagRepository
+     */
     public function __construct(TagRepository $tagRepository)
     {
         $this->tagRepository = $tagRepository;
@@ -98,15 +101,5 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $albums = $this->albumRepository->findLatest();
         $this->view->assign('albums', $albums);
-    }
-
-    /**
-     * action addTag
-     *
-     * @return void
-     */
-    public function addTagAction()
-    {
-
     }
 }

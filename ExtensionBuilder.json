@@ -12,7 +12,7 @@
                 "actionGroup": {
                     "_default0_list": false,
                     "_default1_show": false,
-                    "_default2_new_create": true,
+                    "_default2_new_create": false,
                     "_default3_edit_update": false,
                     "_default4_delete": false,
                     "customActions": [
@@ -149,8 +149,7 @@
                     "_default4_delete": false,
                     "customActions": [
                         "search",
-                        "latest",
-                        "addTag"
+                        "latest"
                     ]
                 },
                 "name": "Album",
@@ -239,6 +238,17 @@
                             "relationWire": "[wired]",
                             "renderType": "selectMultipleSideBySide",
                             "uid": "616794269685"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "Auteur",
+                            "relationName": "auteur",
+                            "relationType": "manyToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "342603257394"
                         }
                     ]
                 }
@@ -320,10 +330,10 @@
             "value": {
                 "actionGroup": {
                     "_default0_list": true,
-                    "_default1_show": false,
-                    "_default2_new_create": true,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
                     "_default3_edit_update": false,
-                    "_default4_delete": true,
+                    "_default4_delete": false,
                     "customActions": []
                 },
                 "name": "Tag",
@@ -357,7 +367,30 @@
                     ]
                 },
                 "relationGroup": {
-                    "relations": []
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "albums",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectMultipleSideBySide",
+                            "uid": "990599033791"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "images",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectMultipleSideBySide",
+                            "uid": "47887542650"
+                        }
+                    ]
                 }
             }
         },
@@ -376,7 +409,9 @@
                     "_default2_new_create": false,
                     "_default3_edit_update": false,
                     "_default4_delete": false,
-                    "customActions": []
+                    "customActions": [
+                        "search"
+                    ]
                 },
                 "name": "Auteur",
                 "objectsettings": {
@@ -649,9 +684,9 @@
         "plugins": [
             {
                 "actions": {
-                    "controllerActionCombinations": "Image => latest,new,create\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest,addTag\nTag => list",
-                    "noncacheableActions": "Album => search",
-                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search; Album->addTag;\nListe auteurs\nAuteur->list;\nListe categories\nCategory->list;\nListe tags\nTag->list;"
+                    "controllerActionCombinations": "Image => latest\nCategory => list,show\nAuteur => list,show\nAlbum => list,show,latest\nTag => list,show",
+                    "noncacheableActions": "Album => search\nAuteur => search\nCategory => search",
+                    "switchableActions": "Dernieres photos\nImage->latest;\nDerniers albums\nAlbum->latest;\nListe albums\nAlbum->list; Album->show; Album->search;\nListe auteurs\nAuteur->list;Auteur->show;Auteur->search\nListe categories\nCategory->list;Category->show;Category->search;\nListe tags\nTag->list;Tag->show;"
                 },
                 "description": "Galerie photo de qualit\u00e9",
                 "key": "plugin",
@@ -711,6 +746,18 @@
         },
         {
             "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_0",
+                "uid": "215353383005"
+            },
+            "tgt": {
+                "moduleId": 3,
+                "terminal": "SOURCES",
+                "uid": "40452388997"
+            }
+        },
+        {
+            "src": {
                 "moduleId": 1,
                 "terminal": "relationWire_2",
                 "uid": "616794269685"
@@ -723,19 +770,43 @@
         },
         {
             "src": {
-                "moduleId": 0,
+                "moduleId": 3,
                 "terminal": "relationWire_0",
-                "uid": "215353383005"
+                "uid": "990599033791"
             },
             "tgt": {
-                "moduleId": 3,
+                "moduleId": 1,
                 "terminal": "SOURCES",
-                "uid": "40452388997"
+                "uid": "1398139365412"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 3,
+                "terminal": "relationWire_1",
+                "uid": "47887542650"
+            },
+            "tgt": {
+                "moduleId": 0,
+                "terminal": "SOURCES",
+                "uid": "1134968328652"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 1,
+                "terminal": "relationWire_3",
+                "uid": "342603257394"
+            },
+            "tgt": {
+                "moduleId": 4,
+                "terminal": "SOURCES",
+                "uid": "1347940378497"
             }
         }
     ],
     "log": {
-        "last_modified": "2019-07-02 02:00",
+        "last_modified": "2019-07-07 11:35",
         "extension_builder_version": "8.10.3",
         "be_user": " (1)"
     }

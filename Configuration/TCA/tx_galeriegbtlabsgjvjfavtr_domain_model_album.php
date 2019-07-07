@@ -15,7 +15,7 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'name,description,publication_date,images,categories,tags',
+        'searchFields' => 'name,description,auteur,publication_date,images,categories,tags',
         'iconfile' => 'EXT:galerie_gbtlabsgjvjfavtr/Resources/Public/Icons/tx_galeriegbtlabsgjvjfavtr_domain_model_album.gif'
     ],
     'interface' => [
@@ -140,7 +140,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_galeriegbtlabsgjvjfavtr_domain_model_auteur',
-                'size' => 1,
+                'minitems' => 0,
                 'maxitems' => 1,
                 'eval' => 'required'
             ],

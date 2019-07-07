@@ -295,4 +295,30 @@ class AlbumTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
         $this->subject->removeTag($tag);
     }
+
+    /**
+     * @test
+     */
+    public function getAuteurReturnsInitialValueForAuteur()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getAuteur()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setAuteurForAuteurSetsAuteur()
+    {
+        $auteurFixture = new \Gtasjjat\GalerieGbtlabsgjvjfavtr\Domain\Model\Auteur();
+        $this->subject->setAuteur($auteurFixture);
+
+        self::assertAttributeEquals(
+            $auteurFixture,
+            'auteur',
+            $this->subject
+        );
+    }
 }

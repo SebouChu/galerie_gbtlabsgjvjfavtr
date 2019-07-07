@@ -23,7 +23,7 @@ galerie_cantonnais
 		en
 
 	:Description:
-		Galerie d&#039;images pour le projet de Typo3 DAWIN
+		Galerie d&#039;images pour le projet de Typo3 DAWIN 
 
 	:Keywords:
 		comma,separated,list,of,keywords

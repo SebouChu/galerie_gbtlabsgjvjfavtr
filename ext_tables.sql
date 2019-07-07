@@ -53,6 +53,7 @@ CREATE TABLE tx_galeriegbtlabsgjvjfavtr_domain_model_album (
 	images int(11) unsigned DEFAULT '0' NOT NULL,
 	categories int(11) unsigned DEFAULT '0' NOT NULL,
 	tags int(11) unsigned DEFAULT '0' NOT NULL,
+	auteur int(11) unsigned DEFAULT '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -112,6 +113,8 @@ CREATE TABLE tx_galeriegbtlabsgjvjfavtr_domain_model_tag (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
+	albums int(11) unsigned DEFAULT '0' NOT NULL,
+	images int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

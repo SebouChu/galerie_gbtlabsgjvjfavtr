@@ -13,7 +13,7 @@ call_user_func(
                 'Category' => 'list, show',
                 'Auteur' => 'list, show',
                 'Album' => 'list, show, latest',
-                'Tag' => 'list'
+                'Tag' => 'list, show'
             ],
             // non-cacheable actions
             [
